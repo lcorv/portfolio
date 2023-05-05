@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0A6C7;}
+	.st1{fill:#F7F1A1;filter:url(#AI_OmbraSfumata_1);}
+</style>
+<filter  height="140%" width="140%" y="-20%" x="-20%" id="AI_OmbraSfumata_1">
+	<feGaussianBlur  stdDeviation="4" in="SourceAlpha" result="blur"></feGaussianBlur>
+	<feOffset  dx="4" dy="4" in="blur" result="offsetBlur"></feOffset>
+	
+		<feSpecularLighting  style="lighting-color:white" surfaceScale="5" in="blur" result="specOut" specularExponent="10" specularConstant="1">
+		<fePointLight  z="-20000" y="-10000" x="-5000"></fePointLight>
+	</feSpecularLighting>
+	<feComposite  in2="SourceAlpha" operator="in" in="specOut" result="specOut"></feComposite>
+	<feComposite  k2="1" k1="0" k3="1" k4="0" in2="specOut" operator="arithmetic" in="SourceGraphic" result="litPaint">
+		</feComposite>
+	<feMerge>
+		<feMergeNode  in="offsetBlur"></feMergeNode>
+		<feMergeNode  in="litPaint"></feMergeNode>
+	</feMerge>
+</filter>
+<polygon class="st0" points="894.6,117 113.7,117 113.7,878.9 640.6,878.9 894.6,640.8 "/>
+<path class="st1" d="M187.5,156.3c-17.2,0-31.3,14.1-31.3,31.3v625c0,17.2,14.1,31.3,31.3,31.3H625V687.5
+	c0-34.6,27.9-62.5,62.5-62.5h156.3V187.5c0-17.2-14.1-31.3-31.3-31.3H187.5z M625,937.5H187.5c-68.9,0-125-56.1-125-125v-625
+	c0-68.9,56.1-125,125-125h625c68.9,0,125,56.1,125,125V625v10.7c0,33.2-13.1,65-36.5,88.5L724.2,901c-23.4,23.4-55.3,36.5-88.5,36.5
+	H625z"/>
+</svg>
