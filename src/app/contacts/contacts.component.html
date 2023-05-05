@@ -1,0 +1,48 @@
+<div class="background">conta ct me</div>
+<div fxFlex="100" fxLayout="row wrap"  class="content">
+    <div class="first-column" fxLayout.gt-sm="row wrap" fxLayout="column" fxLayoutAlign="center center" fxFlex="100" fxFlex.gt-sm="60">
+        <div fxFlex="100" class="animated-text" appText [pres]="text()" [delay]="delay">
+        </div>
+        <div class="form-container section email-form"  fxLayout="row wrap" *ngIf="init" fxFlex="75" @enterBottom>
+            <h3 fxFlex="100">{{STRINGS[0].sendAnEmail[lang]}}:</h3>
+            <form fxFlex.gt-sm="100" fxFlex="100" (submit)="onSubmit('email')" fxLayoutAlign="center center" fxLayout="row wrap" #cForm="ngForm" novalidate
+                [formGroup]="contactForm">
+                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                    <input class="form-input" fxFlex="100" formControlName="subject"
+                        [placeholder]="STRINGS[0].subject[lang]" type="text" required />
+                    <div class="form-err" *ngIf="formErrors.subject">{{formErrors.subject}}</div>
+                </div>
+                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                    <textarea class="form-input" fxFlex="100" formControlName="message"
+                        [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
+                    <div class="form-err" *ngIf="formErrors.message">{{formErrors.message}}</div>
+                </div>
+                <div class="form-actions">
+                    <button appButton [disabled]="!contactForm.valid" class="btn btn-link" type="submit">Invia</button>
+                </div>
+            </form>
+        </div>
+        <h2 fxFlex="100" *ngIf="init" @enterLeft>{{STRINGS[0].or[lang]}}</h2>
+        <div class="form-container section whatsapp-form" fxLayout="row wrap" *ngIf="init" fxFlex="70"  @enterBottom>
+            <h3 fxFlex="100">{{STRINGS[0].textMeOnWhatsapp[lang]}}:</h3>
+            <form fxFlex.gt-sm="100" fxFlex="100" fxLayoutAlign="center center" (submit)="onSubmit('whatsapp')" fxLayoutGap="20" fxLayout="row wrap" #cForm="ngForm" novalidate
+                [formGroup]="whatsappForm">
+                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                    <textarea class="form-input" fxFlex="100" formControlName="message"
+                        [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
+                    <div class="form-err" *ngIf="whatsappErrors.message">{{whatsappErrors.message}}</div>
+                </div>
+                <div class="form-actions">
+                    <button appButton [disabled]="!whatsappForm.valid" class="btn btn-link" type="submit">Invia</button>
+                </div>
+            </form>
+        </div>
+        <h2 fxFlex="100" *ngIf="init" @enterLeft>{{STRINGS[0].or[lang]}}</h2>
+        <div  class="call-me section">
+            <a href="tel: +39 3801010977" class="btn-link" appButton> <i class="material-symbols-outlined">phone</i>{{STRINGS[0].callMe[lang]}}</a>
+        </div>
+    </div>
+    <div fxFlex="100" fxFlex.gt-sm="40" class="second-column">
+        <div [ngStyle.lt-sm]="{'position': 'relative',width:'100%', right: '0px'}" *ngIf="init" class="map" @enterRight>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d90177.80172182462!2d7.739388518859817!3d45.06436890999951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e3!4m0!4m5!1s0x47886d0cc3ed5cdf%3A0x405e67d473c94e0!2sTorino%20TO!3m2!1d45.0703393!2d7.686864!5e0!3m2!1sit!2sit!4v1683019407335!5m2!1sit!2sit" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+    </div>

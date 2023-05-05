@@ -1,0 +1,31 @@
+<div class="background">my skills</div>
+<div class="content" fxFlex="100">
+    <div class="animated-text section" appText [pres]="title" [delay]="delay">
+    </div>
+    <div  class="section" fxLayout="row wrap" fxLayoutAlign="start start">
+        <pre fxFlex="100" fxFlex.gt-sm="50" *ngIf="init" class="skills" @enterLeft>
+&lt;h3> <h3>{{STRINGS[0].languagesAndProgramming[lang]|uppercase}}:</h3> &lt;/h3>
+&lt;ul>
+    &lt;li> <span>Node JS</span> &lt;/li>
+    &lt;li> <span>HTML</span> &lt;/li>
+    &lt;li> <span>CSS</span> &lt;/li>
+    &lt;li> <span>Javascript</span> &lt;/li>
+    &lt;li> <span>Typescript</span> &lt;/li>
+    &lt;li> <span>Angular 2</span> &lt;/li>
+    &lt;li> <span>Bootstrap</span> &lt;/li>
+    &lt;li> <span>JQuery</span> &lt;/li>
+    &lt;li> <span>Express</span> &lt;/li>
+    &lt;li> <span>MongoDb</span> &lt;/li>
+&lt;/ul>
+        </pre>
+         <pre fxFlex="100" fxFlex.gt-sm="50" *ngIf="init" class="skills" @enterLeft>
+&lt;h3> <h3>{{STRINGS[0].graphicsPrograms[lang]|uppercase}}:</h3> &lt;/h3>
+&lt;ul>
+    &lt;li> <span>Adobe Illustrator</span> &lt;/li>
+    &lt;li> <span>Adobe Photoshop</span> &lt;/li>
+    &lt;li> <span>GIMP</span> &lt;/li>
+    &lt;li> <span>Inkskape</span> &lt;/li>
+&lt;/ul>
+        </pre>
+    </div>
+</div>

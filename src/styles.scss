@@ -1,1 +1,267 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+:root{
+    --primary: #111;
+    --red: #FC7684;
+    --accent:#5257B6;
+    --primary-text-inactive: #fff7;
+    --primary-text: #fff;
+}
+html{
+    font-family: 'Poppins', sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: var(--primary);
+}
+.mat-select-panel{
+    background-color: var(--primary);
+}
+.mat-option{
+    color:var(--primary-text-inactive)
+}
+.mat-option.mat-active{
+    color: var(--primary-text);
+}
+.language-selector{
+    width: 100%;
+    border: 1px solid var(--primary-text-inactive);
+    border-radius:5px ;
+    overflow: hidden;
+    mat-select{
+        display: inline-flex;
+        height: 30px;
+        font-size: 15px;
+        border-radius: 5px 0 0 5px;
+        background-color: transparent;
+        padding: 0 10px;
+        justify-content: center;
+        align-items: center;
+        .mat-select-arrow{
+            color:var(--primary-text-inactive)
+        }
+        .mat-select-value{
+            color: var(--primary-text-inactive)!important;
+        }
+    }
+    img{
+        height: 30px;
+    }
+}
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 350,
+    'GRAD' 0,
+    'opsz' 48
+  }
+.bg-r{
+    background-color: red;
+}
+.bg-b{
+    background-color: blue;
+}
+.bg-g{
+    background-color: green;
+}
+.section{
+    margin:0px 0 0 0;
+}
+.background{
+    position: fixed;
+    height:100%;
+    width: 100%;
+    line-height: 300px;
+    font-size: 400px;
+    word-break:normal;
+    transform: translateX(-150px);
+    font-weight: bolder;
+    color: #4441;
+}
+.btn{
+    -webkit-tap-highlight-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    height: 60px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--primary-text);
+    cursor: pointer;
+    .material-symbols-outlined {
+        font-size: 25px;
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 50,
+        'GRAD' 0,
+        'opsz' 48
+      }
+}
+.btn:disabled{
+    color: var(--primary-text-inactive);
+    border-color: var(--primary-text-inactive);
+    background-color: transparent;
+}
+.btn-link{
+    display: inline-flex;
+    min-height: 60px;
+    align-items: center;
+    justify-content: center;
+    border:2px solid var(--primary-text);
+    text-decoration: none;
+    color: var(--primary-text);
+    background: linear-gradient(45deg, var(--red) 60%, transparent 60%);
+    background-repeat: no-repeat;
+    transition: background-size 0.5s, background-color 0.5s;
+    background-size: 0% 300%;
+    padding: 10px 50px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    z-index: 1;
+    .material-symbols-outlined{
+        margin-right: 10px;
+    }
+}
+.main{
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+    background-repeat:repeat;
+    padding: 0px 0px 0px 0px;
+    position: relative;
+    z-index: 1;
+    .content{
+        min-width: calc(100vw - 200px);
+        position: relative;
+        min-height: 100vh;
+        overflow-y: visible;
+        color: var(--primary-text);
+        padding: 0 20px 100px 20px;
+    }
+}
+@keyframes backg{
+    from{
+        background-size: 80px 80px,80px 80px;
+    }
+    to{
+        background-size: 90px 70px,90px 70px;
+    }
+}
+.animated-text{
+    align-items: start;
+    padding: 0px 50px;
+    min-height: 150px;
+    user-select: none;
+    div{
+        .animated-span{
+            display: inline-flex;
+            font-size: 50px;
+            font-weight: bold;
+            height: 50px;
+            min-width: 10px;
+            align-items: center;
+            opacity: 0;
+        }
+    }
+}
+.bounce{
+    animation: stretch 1s 1 forwards!important;
+}
+@keyframes spread{
+    0%{transform:scale(0);opacity: 0;}
+    40%{transform:scale(1.2);opacity: 1;}
+    50%{transform:scale(0.8)}
+    60%{transform:scale(1.1)}
+    70%{transform:scale(0.9)}
+    80%{transform:scale(1.05)}
+    90%{transform:scale(0.95)}
+    100%{transform:scale(1);opacity: 1;}
+}
+@keyframes stretch{
+    0%{transform:scaleY(1);opacity:1;}
+    40%{transform:scaleY(0.8) scaleX(1.2);}
+    50%{transform:scaleY(1.2) scaleX(0.8)}
+    60%{transform:scaleY(0.9) scaleX(1.1)}
+    70%{transform:scaleY(1.1) scaleX(0.9)}
+    80%{transform:scaleY(0.95) scaleX(1.05)}
+    90%{transform:scaleY(1.05) scaleX(0.95)}
+    100%{transform:scaleY(1) scaleX(1)}
+}
+.footer{
+    display: flex;
+    width: 100%;
+    background-color: var(--accent);
+    color:var(--primary-text);
+    font-size: 12px;
+    padding: 10px 20px 40px 20px;
+    h3{
+        margin: 0 0 20px 0;
+    }
+    ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        li{
+            margin: 5px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                text-decoration: none;
+            }
+            a:hover{
+                color: var(--primary-text)!important;
+                font-weight: bold;
+            }
+            i,fa-icon{
+                margin-right: 10px;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+@media  screen and (min-width:960px) {
+    *::-webkit-scrollbar{
+        background-color: var(--accent);
+        width: 10px;
+    }
+    *::-webkit-scrollbar-thumb{
+        background-color: var(--red);
+    }
+}
+@media screen and (max-width: 960px){
+    .main{
+        padding: 20px 0px 80px 0px;
+        .content{
+            width: 100vw;
+            padding: 0 20px 100px 20px;
+        }
+    }
+    .animated-text{
+        align-items: start;
+        padding: 0px 0px;
+        user-select: none;
+        div{
+            .animated-span{
+                display: inline-flex;
+                font-size: 35px;
+                font-weight: bold;
+                height: 50px;
+                min-width: 10px;
+                align-items: center;
+                opacity: 0;
+            }
+        }
+}
+}

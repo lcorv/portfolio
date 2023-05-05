@@ -1,0 +1,80 @@
+.works-container{
+    padding:0 0 200px 0;
+}
+.work{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: var(--accent);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;;
+    .img{
+        width: 30%;
+        img{
+            width: 100%;
+            transition: all 0.5s;
+        }
+    }
+    .description{
+        display: none;
+        transition: all 0.5s;
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: radial-gradient(ellipse at top, #5257B688, #222222ff );
+        padding: 20px;
+        transform: scale(1);
+        opacity: 0;
+        backdrop-filter: blur(10px);
+        text-decoration: none;
+        color: var(--primary-text);
+        .details-container{
+            height: 100%;
+            .links{
+                display: flex;
+                width: 100%;
+                align-items:end;
+                height: 10%;
+                a{
+                    color: var(--primary-text-inactive);
+                    text-decoration: none;
+                    transition: color 0.5s;
+                    font-size: 25px;
+                    margin: 0;
+                }
+                a:hover{
+                    color: var(--primary-text)
+                }
+            }
+            .info{
+                height: 80%;
+                align-self: flex-start;
+                justify-self: start;
+            }
+            .tools{
+                height: 10%;
+                font-size: 10px;
+            }
+        }
+    }
+}
+.work:hover{
+    transform: translateY(-5px);
+}
+.work:hover .description{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+.work:hover .img img{
+    transform: scale(1.2);
+}

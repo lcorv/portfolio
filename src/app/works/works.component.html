@@ -1,0 +1,27 @@
+<div class="background">my works</div>
+<div fxFlex="100" fxLayout="row wrap" class="content">
+    <div fxFlex="100" class="animated-text section" appText [pres]="title" [delay]="delay">
+    </div>
+    <div fxFlex="100" class="section works-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center" fxLayout.gt-sm="row wrap" fxLayoutGap="10" *ngIf="init" [@enterBottom] >
+        <div  class="work mat-elevation-z7" fxLayoutAlign="center center" *ngFor="let work of works" >
+            <div  class="img"  >
+                <img src="{{work.img}}" alt="{{work.name}}">
+            </div>
+            <a  href="{{work.link}}" class="description"  target="_blank">
+                <div class="details-container" fxFlex="100" fxLayoutAlign="center space-between"  fxLayout="row wrap" >
+                    <div fxLayoutAlign="end center" class="links" fxFlex="100" *ngIf="work.github">
+                        <a href="{{work.github}}" matTooltip={{STRINGS[0].linkToTheGitRepository[lang]}} target="_blank">
+                            <fa-icon [icon]="faGit"></fa-icon>
+                        </a>
+                    </div>
+                    <div [innerHTML]=work.description[lang] class="info" fxFlexAlign="start start" fxFlex>
+
+                    </div>
+                    <div class="tools"*ngIf="work.tools" fxFlex="100" fxLayoutAlign="space-around center">
+                        <span *ngFor="let tool of work.tools">{{tool}}</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.welcome-container{
+    height: 120px;
+    .welcome{
+        animation: stroke 4s 1s forwards;
+        stroke-width: 2px;
+        fill:#fff0;
+        stroke-dashoffset: 500;
+        stroke-dasharray: 0 50%;
+        stroke:var(--primary-text);
+        font-size: 150px;
+        height: 100%;
+    }
+}
+.contact-me{
+    margin-top:50px;
+    padding: 0 50px;
+}
+@keyframes stroke{
+    0%{stroke-dashoffset: 500;fill:#fff0;stroke-dasharray: 0 50%;}
+    60%{stroke-width: 2px;fill:#fff0;}
+    90%{stroke-dashoffset: 0;fill:var(--primary-text); stroke-dasharray: 50% 0;}
+    100%{fill:var(--primary-text);stroke-width: 0;}
+}
+

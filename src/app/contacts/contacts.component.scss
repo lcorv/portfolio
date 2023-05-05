@@ -1,0 +1,127 @@
+.first-column{
+    padding: 0px 0px 50px 0px;
+}
+.second-column{
+    height: 100vh;
+    .map{
+        position: fixed;
+        height: 100%;
+        width: 30vw;
+        min-width: 30vw;
+        right: 10px;
+    }
+}
+.section{
+    margin-bottom: 10px;
+}
+.form-container{
+    padding: 10px;
+    form{
+        font-family: 'Poppins', sans-serif;
+        .form-field{
+            min-height: 100px;
+            display: block;
+            position: relative;
+            input, textarea{
+                display: block;
+                position: relative;
+                font-family: 'Poppins', sans-serif;
+                outline-color:#fff0;
+                outline-width: 0px;
+                border: 0px solid var(--red);
+                border-radius: 5px;
+            }
+            input{
+                height: 50px;
+                padding: 0 20px;
+            }
+            textarea{
+                height: 150px;
+                padding:20px;
+                resize: none;
+            }
+            input::placeholder{
+                transition: all 0.2s;
+                transform-origin: 0 0;
+            }
+            input:focus::placeholder{
+                transform:scale(0.5)translateY(-20px)
+            }
+            .form-input{     
+                display: block;
+                position: relative;
+            }
+            .form-err{
+                max-height: 50px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #ff0505;
+            }
+        }
+        .form-field:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 100%;
+            border-bottom:5px solid var(--accent);
+            transform: scaleX(0);
+            transition: all .5s;
+        }
+        .form-field:has(input):after{
+            height: 46px;
+            border-radius: 5px;
+        }
+        .form-field:has(textarea):after{
+            height: 146px;
+            border-radius: 5px;
+        }
+        .form-field:has(input:focus):after,.form-field:has(textarea:focus):after{
+            transform: scaleX(1);
+        }
+        .form-field:has(.form-err):after{
+            border-bottom:5px solid #ff0505;
+        }
+        .form-field:has(.form-err){
+        input{
+            color: #ff0505;
+        }
+        input::placeholder{
+            color:#ff0505;
+        }
+    }
+    }
+    .btn-link{
+        margin-top: 30px;
+        background: linear-gradient(45deg, var(--accent) 60%, transparent 60%);
+        background-repeat: no-repeat;
+        background-size: 0 0;
+        transition: background-size 0.5s, background-color 0.5s, transform 0.5s;
+        background-size: 0% 300%;
+    }
+    .btn-link:disabled{
+        background-color: transparent;
+    }
+    .btn-link:enabled:active{
+        background-size: 300% 150%;
+        transform: scale(0.9);
+    }
+}
+.email-form,.whatsapp-form{
+    background-position: 10% 310%;
+    transition: all 0.5s;
+    background-size: 300px;
+    background-repeat: repeat;
+}
+.email-form:has(*:focus),.whatsapp-form:has(*:focus){
+    background-position: 10% 100%;
+    background-size: 400px;
+}
+.email-form{
+    background-image: url(/assets/images/email_pattern-01.svg); 
+}
+.whatsapp-form{
+    background-image: url(/assets/images/whatsapp_pattern-01.svg);
+    --accent: #25D366;
+}
