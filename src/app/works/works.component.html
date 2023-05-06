@@ -2,7 +2,7 @@
 <div fxFlex="100" fxLayout="row wrap" class="content">
     <div fxFlex="100" class="animated-text section" appText [pres]="title" [delay]="delay">
     </div>
-    <div fxFlex="100"  class="section works-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center" fxLayout.gt-sm="row wrap" fxLayoutGap="10" *ngIf="init" [@enterBottom] >
+    <div fxFlex="100"  class="section works-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center" fxLayout.gt-xs="row wrap" fxLayoutGap="20" *ngIf="init" [@enterBottom] >
         <div  class="work mat-elevation-z7" fxLayoutAlign="center center" *ngFor="let work of works" >
             <div  class="img"  >
                 <img src="{{work.img}}" alt="{{work.name}}">

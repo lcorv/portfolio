@@ -1,9 +1,9 @@
 <div class="background">my skills</div>
-<div class="content" fxFlex="100">
-    <div class="animated-text section" appText [pres]="title" [delay]="delay">
+<div class="content" fxFlex="100" fxLayout="row wrap">
+    <div fxFlex="100" class="animated-text section" appText [pres]="title" [delay]="delay">
     </div>
-    <div  class="section" fxLayout="row wrap" fxLayoutAlign="start start">
-        <pre fxFlex="100" fxFlex.gt-sm="50" *ngIf="init" class="skills" @enterLeft>
+    <div fxFlex="100" class="section" fxLayout="row wrap" fxLayoutAlign.lt-md="center" fxLayoutAlign="start start">
+        <pre fxFlex.gt-xs="50" *ngIf="init" class="skills" @enterLeft>
 &lt;h3> <h3>{{STRINGS[0].languagesAndProgramming[lang]|uppercase}}:</h3> &lt;/h3>
 &lt;ul>
     &lt;li> <span>Node JS</span> &lt;/li>
@@ -18,7 +18,7 @@
     &lt;li> <span>MongoDb</span> &lt;/li>
 &lt;/ul>
         </pre>
-         <pre fxFlex="100" fxFlex.gt-sm="50" *ngIf="init" class="skills" @enterLeft>
+         <pre fxFlex.gt-xs="50" *ngIf="init" class="skills" @enterLeft>
 &lt;h3> <h3>{{STRINGS[0].graphicsPrograms[lang]|uppercase}}:</h3> &lt;/h3>
 &lt;ul>
     &lt;li> <span>Adobe Illustrator</span> &lt;/li>

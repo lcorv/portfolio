@@ -46,7 +46,7 @@
   </div>
   <div fxFlex="100" fxLayout="row wrap" fxFlexOffset.gt-sm="200px" class="main" [@routeAnim]="prepareRoute(outlet)">
     <div fxFlex="100" fxLayoutAlign="center">
-    <div fxFlex="40" fxHide.gt-sm class="language-selector">
+    <div fxFlex="40" fxFlex.gt-xs="20" fxHide.gt-sm class="language-selector">
         <mat-select (selectionChange)="change()" [(ngModel)]="lan" id="" fxFlex="70">
           <mat-option value="it">italiano</mat-option>
           <mat-option value="en">english</mat-option>
