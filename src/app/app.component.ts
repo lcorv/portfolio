@@ -25,7 +25,7 @@ export class AppComponent {
   isOpen = true;
   contacts = Icons.contacts;
   lan:string = "it";
-  langImage: string = './assets/images/great_britain_flag.png';
+  langImage: string = './assets/images/italian_flag.png';
   langImages={
     it:'./assets/images/italian_flag.png',
     en:'./assets/images/great_britain_flag.png'
