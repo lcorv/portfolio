@@ -9,7 +9,7 @@ export function routeAnim(){
                     overflow:'visible',
                     width:'100%'
                 })
-            ]),
+            ],{optional: true }),
             group([
                 query(':enter',[
                     style({
@@ -49,7 +49,7 @@ export function routeAnim(){
                     overflow:'visible',
                     width:'100%'
                 })
-            ]),
+            ],{optional: true }),
             group([
                 query(':enter',[
                     style({

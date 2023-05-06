@@ -1,6 +1,6 @@
 import { Component , ViewChild, ElementRef,ChangeDetectorRef} from '@angular/core';
 import { Icons } from './shared/icons';
-import { ActivatedRoute, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet, Router, ActivationStart } from '@angular/router';
 import { iconAnim } from './animations/navbarIconsAnim';
 import { routeAnim } from './animations/routeAnimation';
 import { enterFromLeft } from './animations/buttonsAnimation';
@@ -27,25 +27,26 @@ export class AppComponent {
   lan:string = "en";
   langImage: string = '/assets/images/great_britain_flag.png';
   langImages={
-    it:'/assets/images/italian_flag.png',
-    en:'/assets/images/great_britain_flag.png'
+    it:'./assets/images/italian_flag.png',
+    en:'./assets/images/great_britain_flag.png'
   }
   constructor(
     public el: ElementRef,
     public cdRef:ChangeDetectorRef,
-    private translationService: TranslationService
+    private translationService: TranslationService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
     ){
-
+      this.setNavRoute()
   }
   ngOnInit(){
     let language = localStorage.getItem('language');
     if(language){
       this.lan = language;
       this.langImage = this.langImages[language];
-      
     }
   }
-  ngAfterViewinit(){
+  ngAfterViewInit(){
     this.prepareRoute(this.outlet)
     this.cdRef.detectChanges();
   }
@@ -62,10 +63,21 @@ export class AppComponent {
       return 1;
     }
   }
-  setNavRoute(outlet: RouterOutlet){
-    if (outlet.isActivated) {
-      this.routeIcon = outlet.activatedRouteData['navbar']["icon"];
-      this.routeLabel = outlet.activatedRouteData['navbar']["label"];      
+  setNavRoute(outlet?: RouterOutlet){
+    if(outlet){
+      if (outlet.isActivated) {
+        this.routeIcon = outlet.activatedRouteData['navbar']["icon"];
+        this.routeLabel = outlet.activatedRouteData['navbar']["label"];      
+      }
+    }
+    else{
+      this.router.events.subscribe(data => {
+        if (data instanceof ActivationStart) {
+          this.routeIcon = data.snapshot.data['navbar']['icon'];
+          this.routeLabel = data.snapshot.data['navbar']['label'];
+          
+        }
+      })
     }
   }
 }

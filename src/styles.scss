@@ -81,6 +81,7 @@ body{
     transform: translateX(-150px);
     font-weight: bolder;
     color: #4441;
+    z-index: -1;
 }
 .btn{
     -webkit-tap-highlight-color: transparent;
@@ -129,6 +130,9 @@ body{
     .material-symbols-outlined{
         margin-right: 10px;
     }
+}
+.btn-link:active{
+    background-size: 300% 150%;
 }
 .main{
     min-height: 100vh;
