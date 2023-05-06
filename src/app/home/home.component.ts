@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { enterFromBottom } from '../animations/buttonsAnimation';
+import { enterFromBottom, enterFromLeft } from '../animations/buttonsAnimation';
 import { animateText } from '../animations/animatedText';
 import { STRINGS } from '../shared/translations';
 
@@ -7,12 +7,12 @@ import { STRINGS } from '../shared/translations';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [enterFromBottom(1000)]
+  animations: [enterFromBottom(1000),enterFromLeft()]
 })
 export class HomeComponent implements OnInit {
 STRINGS = STRINGS;
 animateText = animateText;
-lang = 'en';
+lang = 'it';
 presentation:string[][] = [Array.from(STRINGS[0].hello[this.lang]+','),Array.from(STRINGS[0].iM[this.lang]),Array.from('Luca Corvino')]
 delay:number = 0;
 init = false;

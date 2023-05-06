@@ -10,7 +10,7 @@ import { STRINGS } from '../shared/translations';
   animations: [enterFromLeft(500)]
 })
 export class SkillsComponent implements OnInit {
-  lang = 'en';
+  lang = 'it';
   STRINGS = STRINGS;
   title = [Array.from(this.STRINGS[0].my4[this.lang]), Array.from(this.STRINGS[0].skills[this.lang])];
   delay = 0;

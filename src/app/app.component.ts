@@ -1,6 +1,6 @@
 import { Component , ViewChild, ElementRef,ChangeDetectorRef} from '@angular/core';
 import { Icons } from './shared/icons';
-import { ActivatedRoute, RouterOutlet, Router, ActivationStart } from '@angular/router';
+import { RouterOutlet, Router, ActivationStart } from '@angular/router';
 import { iconAnim } from './animations/navbarIconsAnim';
 import { routeAnim } from './animations/routeAnimation';
 import { enterFromLeft } from './animations/buttonsAnimation';
@@ -24,8 +24,8 @@ export class AppComponent {
   routeLabel="Home";
   isOpen = true;
   contacts = Icons.contacts;
-  lan:string = "en";
-  langImage: string = '/assets/images/great_britain_flag.png';
+  lan:string = "it";
+  langImage: string = './assets/images/great_britain_flag.png';
   langImages={
     it:'./assets/images/italian_flag.png',
     en:'./assets/images/great_britain_flag.png'
@@ -34,7 +34,6 @@ export class AppComponent {
     public el: ElementRef,
     public cdRef:ChangeDetectorRef,
     private translationService: TranslationService,
-    private activatedRoute: ActivatedRoute,
     private router: Router,
     ){
       this.setNavRoute()

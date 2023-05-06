@@ -7,7 +7,7 @@ import { Icons } from '../shared/icons'
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-lan = 'en';
+lan = 'it';
 STRINGS = STRINGS;
 whatsapp= Icons.faWhatsapp;
 ngOnInit(){

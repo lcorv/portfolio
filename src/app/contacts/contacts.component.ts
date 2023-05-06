@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { STRINGS } from '../shared/translations';
-import { TranslationService } from '../services/translation.service';
 import { enterFromBottom,enterFromLeft,enterFromRight } from '../animations/enterAnimations';
 
 @Component({
@@ -13,7 +12,7 @@ import { enterFromBottom,enterFromLeft,enterFromRight } from '../animations/ente
 export class ContactsComponent implements OnInit {
   init = false;
   STRINGS = STRINGS;
-  lang:string = 'en';
+  lang:string = 'it';
   email:string = 'l.corvino@live.it'
   emailLink: string = '';
   wmsg:string = '';

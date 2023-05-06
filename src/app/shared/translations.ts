@@ -3,7 +3,7 @@ export const STRINGS=[
     {
         welcome:{
             it:'benvenuto',
-            en:'welcome'
+            en:'&ensp;welcome'
         }
         ,
         hello:{
@@ -33,7 +33,7 @@ export const STRINGS=[
         },
         theWayYouLike:{
             it:'come preferisci',
-            en:'as you like'
+            en:''
         },
         textMeOnWhatsapp:{
             it:'contattami su WhatsApp',

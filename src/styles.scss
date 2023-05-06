@@ -254,15 +254,18 @@ body{
         }
     }
     .animated-text{
-        align-items: flex-start;
         padding: 0px 0px;
         user-select: none;
+        width: 100%;
         div{
+            max-height: 40px;
+            display: flex;
+            justify-content: center;
             .animated-span{
                 display: inline-flex;
                 font-size: 35px;
                 font-weight: bold;
-                height: 50px;
+                height: 40px;
                 min-width: 10px;
                 align-items: center;
                 opacity: 0;

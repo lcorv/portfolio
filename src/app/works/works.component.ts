@@ -14,7 +14,7 @@ export class WorksComponent implements OnInit {
   faGit = faGithub;
   STRINGS = STRINGS;
   init = false;
-  lang = 'en';
+  lang = 'it';
   title = [Array.from(STRINGS[0].my2[this.lang]), Array.from(STRINGS[0].works[this.lang])];
   works = WORKS;
   delay = 0;
