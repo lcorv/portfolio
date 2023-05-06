@@ -115,13 +115,13 @@
     background-repeat: repeat;
 }
 .email-form:has(*:focus),.whatsapp-form:has(*:focus){
-    background-position: 10% 100%;
-    background-size: 400px;
+    background-position: 10% 305%;
+    background-size: 350px;
 }
 .email-form{
-    background-image: url(/assets/images/email_pattern-01.svg); 
+    background-image: url(../../assets/images/email_pattern-01.svg); 
 }
 .whatsapp-form{
-    background-image: url(/assets/images/whatsapp_pattern-01.svg);
+    background-image: url(../../assets/images/whatsapp_pattern-01.svg);
     --accent: #25D366;
 }

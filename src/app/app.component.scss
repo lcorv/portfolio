@@ -4,8 +4,8 @@
 .navbar{
     width: 200px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
     padding: 20px;

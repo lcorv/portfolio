@@ -42,7 +42,7 @@
             .links{
                 display: flex;
                 width: 100%;
-                align-items:end;
+                align-items:flex-end;
                 height: 10%;
                 a{
                     color: var(--primary-text-inactive);
@@ -58,7 +58,7 @@
             .info{
                 height: 80%;
                 align-self: flex-start;
-                justify-self: start;
+                justify-self: flex-start;
             }
             .tools{
                 height: 10%;
@@ -87,7 +87,7 @@
         .img{
             display: flex;
             height: 50%;
-            align-items: end;
+            align-items: flex-end;
         }
         .description{
             display: flex;
