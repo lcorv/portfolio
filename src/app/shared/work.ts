@@ -4,7 +4,7 @@ export class Work{
         it:string;
         en:string;
     };
-    img: string;
+    img: string[];
     link: string;
     anim?: string;
     tools?: string[];

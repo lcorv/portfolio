@@ -153,16 +153,8 @@ body{
         padding: 0 20px 100px 20px;
     }
 }
-@keyframes backg{
-    from{
-        background-size: 80px 80px,80px 80px;
-    }
-    to{
-        background-size: 90px 70px,90px 70px;
-    }
-}
 .animated-text{
-    align-items: start;
+    align-items: flex-start;
     padding: 0px 50px;
     min-height: 150px;
     max-height: 150px;
