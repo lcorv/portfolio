@@ -17,7 +17,7 @@
     </div>
     <div fxFlex="100" class="animated-text presentation section" appText [delay]="delay" [pres]="presentation">
     </div>
-    <div fxFlexAlign="end" class="contact-me section" fxFlex="100" fxLayoutAlign="center">
+    <div fxFlexAlign="start" class="contact-me section" fxFlex="100">
         <a fxFlex.lt-sm="100" *ngIf="init" class="btn btn-link" routerLink="/contacts" appButton
             @enterBottom>{{STRINGS[0].contactMe[lang]}}</a>
     </div>

@@ -88,19 +88,19 @@
 }
 .navbar-small{
     display:flex;
-    background-color:var(--primary);
+    background-color:var(--accent);
     color:var(--primary-text);
-    height:60px;
-    border-radius:30px;
+    height:80px;
+    border-radius:40px;
     padding: 0;
     align-items:center;
     justify-content:space-around;
     transition: width 0.5s;
-    width:60px;
+    width:80px;
     overflow:hidden;
     position:fixed!important;
     bottom:15px;
-    left:15px;
+    left:5vw;
     animation:close 0.5s 1 forwards;
     z-index:10;
     opacity:0.6;
@@ -109,7 +109,7 @@
         padding:0;
         margin: 0;
         font-size: 12px ;
-        height: 60px;
+        height: 80px;
         transform:scale(0);
         transition:all 0.5s;
         align-items: center;
@@ -119,8 +119,8 @@
 .navbar-small .location{
     position:absolute;
     color: var(--primary-text);
-    height:60px;
-    width:60px;
+    height:80px;
+    width:80px;
     left:0;
     display:flex;
     flex-direction:column;
@@ -140,13 +140,13 @@
     opacity:1;
 }
 @keyframes open{
-    60%{width:82vw}
-    100%{width:80vw}
+    60%{width:92vw}
+    100%{width:90vw}
 }
 @keyframes close{
-    0%{width: 80vw;}
-    60%{width:57px}
-    100%{width:60px}
+    0%{width: 90vw;}
+    60%{width:77px}
+    100%{width:80px}
 }
 .navbar-small-open .btn{
     transform:scale(1);

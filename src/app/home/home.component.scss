@@ -1,5 +1,5 @@
 .welcome-container{
-    height: 120px;
+    height: 100px;
     width: 100%;
     .welcome{
         animation: stroke 4s 1s forwards;
@@ -11,6 +11,9 @@
         font-size: 150px;
         height: 100%;
     }
+}
+.content{
+    padding-bottom:300px;
 }
 .propic{
     position: relative;
@@ -28,7 +31,7 @@
 }
 .contact-me{
     margin-top:50px;
-    padding: 0 50px;
+    padding: 0 0px;
 }
 @keyframes stroke{
     0%{stroke-dashoffset: 500;fill:#fff0;stroke-dasharray: 0 50%;}

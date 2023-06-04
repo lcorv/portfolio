@@ -11,8 +11,14 @@
         right: 10px;
     }
 }
+.text{
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
 .section{
     margin-bottom: 10px;
+    transition: all 0.5s;
 }
 .form-container{
     padding: 10px;

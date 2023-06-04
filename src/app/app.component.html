@@ -32,7 +32,7 @@
     <app-footer></app-footer>
   </nav>
   <div (click)="setNavRoute(outlet); cdRef.detectChanges();" fxHide.gt-sm draggable="true" id="navbar-small"
-    class="navbar-small mat-elevation-z7"  @enterLeft>
+    class="navbar-small navbar-small-open mat-elevation-z7"  @enterLeft>
     <div class="location" appNavbar><i class="material-symbols-outlined">{{routeIcon}}</i><span>{{routeLabel}}</span>
     </div>
     <a *ngIf="routeLabel!='Home'" class="btn btn-primary" mat-ripple routerLink="home" @iconAnim><i
