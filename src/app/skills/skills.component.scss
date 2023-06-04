@@ -14,7 +14,9 @@
     }
 }
 .education{
-    transition: all .4s;
+    div{
+        transition: all .4s;
+    }
     table{
         padding: 10px;
         font-size: 16px;

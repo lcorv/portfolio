@@ -31,22 +31,9 @@
     <div fxFlex></div>
     <app-footer></app-footer>
   </nav>
-  <div (click)="setNavRoute(outlet); cdRef.detectChanges();" fxHide.gt-sm draggable="true" id="navbar-small"
-    class="navbar-small navbar-small-open mat-elevation-z7"  @enterLeft>
-    <div class="location" appNavbar><i class="material-symbols-outlined">{{routeIcon}}</i><span>{{routeLabel}}</span>
-    </div>
-    <a *ngIf="routeLabel!='Home'" class="btn btn-primary" mat-ripple routerLink="home" @iconAnim><i
-        class="material-symbols-outlined">home</i>Home</a>
-    <a *ngIf="routeLabel!='Contacts'" class="btn btn-primary" mat-ripple routerLink="contacts" @iconAnim><i
-        class="material-symbols-outlined">person</i>Contacts</a>
-    <a *ngIf="routeLabel!='Skills'" class="btn btn-primary" mat-ripple routerLink="skills" @iconAnim><i
-        class="material-symbols-outlined">done_all</i>Skills</a>
-    <a *ngIf="routeLabel!='Works'" class="btn btn-primary" mat-ripple routerLink="works" @iconAnim><i
-        class="material-symbols-outlined">settings</i>Works</a>
-  </div>
   <div fxFlex="100" fxLayout="row wrap" fxFlexOffset.gt-sm="200px" class="main" [@routeAnim]="prepareRoute(outlet)">
     <div fxFlex="100" fxLayoutAlign="center">
-    <div fxFlex="40" fxFlex.gt-xs="20" fxHide.gt-sm class="language-selector">
+      <div fxFlex="40" fxFlex.gt-xs="20" fxHide.gt-sm class="language-selector">
         <mat-select (selectionChange)="change()" [(ngModel)]="lan" id="" fxFlex="70">
           <mat-option value="it">italiano</mat-option>
           <mat-option value="en">english</mat-option>
@@ -54,9 +41,22 @@
         <img fxFlex="30" src={{langImage}} alt={{lan}}>
       </div>
     </div>
-      <router-outlet #outlet="outlet"></router-outlet>
+    <router-outlet #outlet="outlet"></router-outlet>
     <div fxHide.gt-sm fxFlex="100">
       <app-footer></app-footer>
     </div>
   </div>
+</div>
+<div (click)="setNavRoute(outlet); cdRef.detectChanges();" fxHide.gt-sm draggable="true" id="navbar-small"
+  class="navbar-small navbar-small-open mat-elevation-z7" @enterLeft>
+  <div class="location" appNavbar><i class="material-symbols-outlined">{{routeIcon}}</i><span>{{routeLabel}}</span>
+  </div>
+  <a *ngIf="routeLabel!='Home'" class="btn btn-primary" mat-ripple routerLink="home" @iconAnim><i
+      class="material-symbols-outlined">home</i>Home</a>
+  <a *ngIf="routeLabel!='Contacts'" class="btn btn-primary" mat-ripple routerLink="contacts" @iconAnim><i
+      class="material-symbols-outlined">person</i>Contacts</a>
+  <a *ngIf="routeLabel!='Skills'" class="btn btn-primary" mat-ripple routerLink="skills" @iconAnim><i
+      class="material-symbols-outlined">done_all</i>Skills</a>
+  <a *ngIf="routeLabel!='Works'" class="btn btn-primary" mat-ripple routerLink="works" @iconAnim><i
+      class="material-symbols-outlined">settings</i>Works</a>
 </div>

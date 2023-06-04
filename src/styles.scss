@@ -17,6 +17,7 @@ html{
 body{
     margin: 0;
     background-color: var(--primary);
+    min-height: 100vh;
 }
 .anim-05{
     transition: all 0.5s;
@@ -177,7 +178,6 @@ body{
     position: relative;
     height: 10px;
     width: 1px;
-    background-color: red;
 }
 .out{
     opacity: 0;
@@ -256,7 +256,7 @@ body{
         padding: 20px 0px 0px 0px;
         .content{
             width: 100vw;
-            padding: 20px 0px 0px 0px;
+            padding: 20px 0px 50px 0px;
         }
         .footer{
             overflow: hidden;

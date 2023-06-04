@@ -9,6 +9,9 @@
         width: 30vw;
         min-width: 30vw;
         right: 10px;
+        iframe{
+            transition: all 0.5s;
+        }
     }
 }
 .text{
