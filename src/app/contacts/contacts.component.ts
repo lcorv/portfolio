@@ -13,6 +13,7 @@ export class ContactsComponent implements OnInit {
   init = false;
   STRINGS = STRINGS;
   lang:string = 'it';
+  telNum:string = '3801010977'
   email:string = 'l.corvino@live.it'
   emailLink: string = '';
   wmsg:string = '';
@@ -96,8 +97,7 @@ export class ContactsComponent implements OnInit {
   }
     if(media=='whatsapp'){
       let form = this.whatsappForm.value;
-      this.wmsg = `https://wa.me/3801010977?text=${form.message}`;
-      console.log(this.wmsg)
+      this.wmsg = `https://wa.me/${this.telNum}?text=${form.message}`;
       open( this.wmsg);
     }
   }

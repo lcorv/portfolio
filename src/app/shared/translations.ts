@@ -2,8 +2,8 @@ import { Translation } from "./translation"
 export const STRINGS=[
     {
         welcome:{
-            it:'benvenuto',
-            en:'&ensp;welcome'
+            it:'Benvenuto',
+            en:'&ensp;Welcome'
         }
         ,
         hello:{

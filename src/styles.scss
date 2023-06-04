@@ -90,7 +90,7 @@ body{
     align-items: center;
     justify-content: start;
     padding: 10px;
-    height: 60px;
+    height: 50px;
     margin: 5px;
     font-size: 15px;
     font-weight: 400;
@@ -174,6 +174,17 @@ body{
 .bounce{
     animation: stretch 1s 1 forwards!important;
 }
+.scroll-watcher{
+    display: block;
+    position: relative;
+    height: 10px;
+    width: 100%;
+}
+.out{
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
 @keyframes spread{
     0%{transform:scale(0);opacity: 0;}
     40%{transform:scale(1.2);opacity: 1;}

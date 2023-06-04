@@ -21,6 +21,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { BounceDirective } from './directives/bounce.directive';
 import { TextDirective } from './directives/text.directive';
 import { FooterComponent } from './footer/footer.component';
+import { EnterDirective } from './directives/enter.directive';
+import { IconsDirective } from './directives/icons.directive';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     BounceDirective,
     TextDirective,
     FooterComponent,
+    EnterDirective,
+    IconsDirective,
   ],
   imports: [
     BrowserModule,

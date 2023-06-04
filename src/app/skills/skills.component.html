@@ -3,6 +3,9 @@
     <div fxFlex="100" class="animated-text section" appText [pres]="title" [delay]="delay">
     </div>
     <div fxFlex="100" class="section" fxLayout="row wrap" fxLayoutAlign.lt-md="center" fxLayoutAlign="start start">
+        <h2 fxFlex="100">
+            Competenze informatiche:
+        </h2>
         <pre fxFlex.gt-xs="50" *ngIf="init" class="skills" @enterLeft>
 &lt;h3> <h3>{{STRINGS[0].languagesAndProgramming[lang]|uppercase}}:</h3> &lt;/h3>
 &lt;ul>
@@ -18,7 +21,7 @@
     &lt;li> <span>MongoDb</span> &lt;/li>
 &lt;/ul>
         </pre>
-         <pre fxFlex.gt-xs="50" *ngIf="init" class="skills" @enterLeft>
+        <pre fxFlex.gt-xs="50" *ngIf="init" class="skills" @enterLeft>
 &lt;h3> <h3>{{STRINGS[0].graphicsPrograms[lang]|uppercase}}:</h3> &lt;/h3>
 &lt;ul>
     &lt;li> <span>Adobe Illustrator</span> &lt;/li>
@@ -27,5 +30,56 @@
     &lt;li> <span>Inkskape</span> &lt;/li>
 &lt;/ul>
         </pre>
+    </div>
+    <div class="section education" fxLayout="row wrap" fxFlex.gt-xs="100" fxLayoutAlign.lt-md="center" fxLayoutAlign="start start" appEnter>
+        <h2 fxFlex="100">Istruzione:</h2>
+        <div fxFlex.gt-xs="50" fxLayout="row wrap">
+            <h3 fxFlex="100">LAUREA TRIENNALE</h3>
+            <table fxFlex="100" >
+                <tr>
+                    <th>Anno:</th>
+                    <td>2015</td>
+                </tr>
+                <tr>
+                    <th>Città-Provincia:</th>
+                    <td>Chieti, CH</td>
+                </tr>
+                <tr>
+                    <th>Università:</th>
+                    <td>Università degli studi ‘G.D’Annunzio’, <br>
+                        Scuola di Medicina e Scienze della Salute, <br>
+                        L-24 - Laurea in Scienze e tecniche psicologiche</td>
+                </tr>
+                <tr>
+                    <th>Votazione finale:</th>
+                    <td>97/110</td>
+                </tr>
+                <tr>
+                    <th>Data di conseguimento:</th>
+                    <td>22/09/2015</td>
+                </tr>
+            </table>
+        </div>
+        <div fxFlex.gt-xs="50" fxLayout="row wrap">
+            <h3 fxFlex="100">{{'maturità scientifica'|uppercase}}</h3>
+            <table fxFlex="100" >
+                <tr>
+                    <th>Anno:</th>
+                    <td>2011</td>
+                </tr>
+                <tr>
+                    <th>Città-Provincia:</th>
+                    <td>Ariano Irpino, AV</td>
+                </tr>
+                <tr>
+                    <th>Istituto:</th>
+                    <td>Liceo Scientifico P.P.Parzanese</td>
+                </tr>
+                <tr>
+                    <th>Votazione finale:</th>
+                    <td>63/100</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
