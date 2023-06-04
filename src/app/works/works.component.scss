@@ -24,7 +24,7 @@
     display: block;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s;
+    transition: transform 0.2s, opacity 0.5s;
     @keyframes carousel{
         0%{transform: rotateX(0)}
         1%{transform:translateY(125px)translateZ(-216.5px)rotateX(60deg)}

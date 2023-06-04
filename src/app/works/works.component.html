@@ -3,7 +3,7 @@
     <div fxFlex="100" class="animated-text section" appText [pres]="title" [delay]="delay">
     </div>
     <div fxFlex="100"  class="section works-container" fxLayout="column" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="start center" fxLayout.gt-xs="row wrap" fxLayoutGap="20" *ngIf="init" [@enterBottom] >
-        <div class="work " *ngFor="let work of works" >
+        <div class="work " *ngFor="let work of works" appEnter>
             <div class="carousel mat-elevation-z7">
                 <div class="img">
                     <img src="{{work.img[0]}}" alt="{{work.name}}">

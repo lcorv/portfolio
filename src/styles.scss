@@ -18,6 +18,9 @@ body{
     margin: 0;
     background-color: var(--primary);
 }
+.anim-05{
+    transition: all 0.5s;
+}
 .mat-select-panel{
     background-color: var(--primary);
 }
@@ -135,20 +138,15 @@ body{
     background-size: 300% 150%;
 }
 .main{
-    min-height: 100vh;
-    height: 100vh;
     margin: 0;
-    overflow: scroll;
+    overflow: visible;
     overflow-x: hidden;
     background-repeat:repeat;
-    padding: 0px 0px 0px 0px;
     position: relative;
     z-index: 1;
     .content{
         min-width: calc(100vw - 200px);
         position: relative;
-        min-height: 100vh;
-        overflow-y: visible;
         color: var(--primary-text);
         padding: 0 20px 100px 20px;
     }
@@ -178,7 +176,8 @@ body{
     display: block;
     position: relative;
     height: 10px;
-    width: 100%;
+    width: 1px;
+    background-color: red;
 }
 .out{
     opacity: 0;
@@ -249,14 +248,18 @@ body{
     }
 }
 @media screen and (max-width: 960px){
+    body{
+        margin-bottom: 100px;
+    }
     .main{
-        height: calc(100vh - 100px);
-        min-height: calc(100vh - 100px);
+        overflow: visible;
         padding: 20px 0px 0px 0px;
         .content{
             width: 100vw;
             padding: 20px 0px 0px 0px;
-            overflow: visible;
+        }
+        .footer{
+            overflow: hidden;
         }
     }
     .animated-text{
