@@ -250,8 +250,8 @@ body{
 }
 @media screen and (max-width: 960px){
     .main{
-        height: 85vh;
-        min-height: 85vh;
+        height: calc(100vh - 100px);
+        min-height: calc(100vh - 100px);
         padding: 20px 0px 0px 0px;
         .content{
             width: 100vw;
