@@ -32,6 +32,12 @@
             }
             td,th{
                 padding: 10px;
+                a{
+                    color: var(--primary-text-inactive);
+                }
+                a:hover{
+                    color: var(--primary-text)
+                }
             }
         }
         tr:nth-child(odd){

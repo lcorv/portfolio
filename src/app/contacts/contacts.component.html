@@ -5,42 +5,42 @@
             <div fxFlex="100" class="animated-text" appText [pres]="text()" [delay]="delay">
             </div>
         </div>
-        <div class="form-container section email-form out"  fxLayout="row wrap" *ngIf="init"  appEnter>
-            <h3 fxFlex="100">{{STRINGS[0].sendAnEmail[lang]}}:</h3>
-            <form  fxFlex="100" (submit)="onSubmit('email')" fxLayoutAlign="center center" fxLayout="row wrap" #cForm="ngForm" novalidate
+        <div class="form-container section email-form out"  fxLayout="row wrap" fxLayoutAlign="start space-around" *ngIf="init"  appEnter>
+            <h2 fxFlex="100">{{STRINGS[0].sendAnEmail[lang]}}:</h2>
+            <form  fxFlex="100" (submit)="onSubmit('email')" fxLayoutAlign="center space-between" fxLayout="column" #cForm="ngForm" novalidate
                 [formGroup]="contactForm">
-                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                <div fxFlex="20" fxLayout="row wrap" class="form-field">
                     <input class="form-input" fxFlex="100" formControlName="subject"
                         [placeholder]="STRINGS[0].subject[lang]" type="text" required />
                     <div class="form-err" *ngIf="formErrors.subject">{{formErrors.subject}}</div>
                 </div>
-                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                <div fxFlex="40" fxLayout="row wrap" class="form-field">
                     <textarea class="form-input" fxFlex="100" formControlName="message"
                         [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
                     <div class="form-err" *ngIf="formErrors.message">{{formErrors.message}}</div>
                 </div>
-                <div fxFlex.lt-sm="100"  class="form-actions">
+                <div fxFlex.lt-sm="20"  class="form-actions" fxlayout="row wrap" fxLayoutAlign="center center">
                     <button fxFlex.lt-md="100" appButton [disabled]="!contactForm.valid" class="btn btn-link" type="submit">Invia</button>
                 </div>
             </form>
         </div>
         <h2 *ngIf="init" @enterLeft class="anim-05 margin-200" appEnter>{{STRINGS[0].or[lang]}}</h2>
-        <div class="form-container section whatsapp-form" fxLayout="row wrap" *ngIf="init"   appEnter>
-            <h3 fxFlex="100">{{STRINGS[0].textMeOnWhatsapp[lang]}}:</h3>
-            <form fxFlex="100" fxLayoutAlign="center center" (submit)="onSubmit('whatsapp')" fxLayout="row wrap" #cForm="ngForm" novalidate
+        <div class="form-container section whatsapp-form" fxLayout="row wrap" *ngIf="init"  fxLayoutAlign="start space-around" appEnter>
+            <h2 fxFlex="100">{{STRINGS[0].textMeOnWhatsapp[lang]}}:</h2>
+            <form fxFlex="100" fxLayoutAlign="center space-between" (submit)="onSubmit('whatsapp')" fxLayout="column" #cForm="ngForm" novalidate
                 [formGroup]="whatsappForm">
-                <div fxFlex="100" fxLayout="row wrap" class="form-field">
+                <div fxFlex="60" fxLayout="row wrap" class="form-field">
                     <textarea class="form-input" fxFlex="100" formControlName="message"
                         [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
                     <div class="form-err" *ngIf="whatsappErrors.message">{{whatsappErrors.message}}</div>
                 </div>
-                <div fxFlex.lt-sm="100" class="form-actions">
+                <div fxFlex.lt-sm="20" class="form-actions" fxLayoutAlign="center center">
                     <button fxFlex.lt-md="100" appButton [disabled]="!whatsappForm.valid" class="btn btn-link" type="submit">Invia</button>
                 </div>
             </form>
         </div>
         <h2 *ngIf="init" @enterLeft class="anim-05 margin-200" appEnter>{{STRINGS[0].or[lang]}}</h2>
-        <div fxFlex="100" fxLayoutAlign="center" class="call-me section" appEnter>
+        <div  fxLayoutAlign="center" class="call-me section" appEnter>
             <a href="tel:+393801010977" class="btn-link" appButton> <i class="material-symbols-outlined">phone</i>{{STRINGS[0].callMe[lang]}}</a>
         </div>
     </div>

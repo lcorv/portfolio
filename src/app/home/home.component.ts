@@ -2,12 +2,13 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { enterFromBottom, enterFromLeft } from '../animations/buttonsAnimation';
 import { animateText } from '../animations/animatedText';
 import { STRINGS } from '../shared/translations';
+import { enterFromTop } from '../animations/enterAnimations';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [enterFromBottom(1000),enterFromLeft()]
+  animations: [enterFromBottom(1000),enterFromLeft(), enterFromTop(500)]
 })
 export class HomeComponent implements OnInit {
 STRINGS = STRINGS;
