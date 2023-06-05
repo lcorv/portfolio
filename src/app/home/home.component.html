@@ -15,10 +15,9 @@
     <div fxHide.gt-sm fxLayoutAlign="center center"*ngIf="init" @enterBottom class="propic">
         <img  src="assets/images/propic.jpg" alt="propic" >
     </div>
-    <div fxFlex="100" class="animated-text presentation section" appText [delay]="delay" [pres]="presentation">
+    <div class="presentation section" fxFlex="100" >
+        <div class="animated-text" appText [delay]="delay" [pres]="presentation">
+        </div>
     </div>
-    <div fxFlexAlign="end" class="contact-me section" fxFlex="100" fxLayoutAlign="center end">
-        <a fxFlex.lt-sm="100" *ngIf="init" class="btn btn-link" routerLink="/contacts" appButton
-            @enterBottom>{{STRINGS[0].contactMe[lang]}}</a>
-    </div>
+    <app-contactme fxFlex="100"></app-contactme>
 </div>

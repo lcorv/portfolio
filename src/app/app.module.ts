@@ -23,6 +23,7 @@ import { TextDirective } from './directives/text.directive';
 import { FooterComponent } from './footer/footer.component';
 import { EnterDirective } from './directives/enter.directive';
 import { IconsDirective } from './directives/icons.directive';
+import { ContactmeComponent } from './contactme/contactme.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { IconsDirective } from './directives/icons.directive';
     FooterComponent,
     EnterDirective,
     IconsDirective,
+    ContactmeComponent,
   ],
   imports: [
     BrowserModule,

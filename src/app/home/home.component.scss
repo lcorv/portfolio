@@ -14,7 +14,7 @@
     }
 }
 .content{
-    padding-bottom:300px;
+    padding-bottom:50px;
 }
 .propic{
     position: relative;
@@ -30,9 +30,11 @@
         top:-10px;
     }
 }
-.contact-me{
-    margin-top:50px;
-    padding: 0 0px;
+.presentation{
+    min-height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 @keyframes stroke{
     0%{stroke-dashoffset: 500;fill:#fff0;stroke-dasharray: 0 50%;}
@@ -41,3 +43,12 @@
     100%{fill:var(--primary-text);stroke-width: 0;}
 }
 
+@media screen and (max-width:960px) {
+    .content{
+        padding-bottom:0px;
+        .presentation{
+            min-height: 45vh;
+            align-items: flex-start;
+        }
+    }
+}

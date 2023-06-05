@@ -22,6 +22,9 @@ body{
 .anim-05{
     transition: all 0.5s;
 }
+.margin-200{
+    margin:200px;
+}
 .mat-select-panel{
     background-color: var(--primary);
 }
@@ -117,7 +120,7 @@ body{
 }
 .btn-link{
     display: inline-flex;
-    min-height: 60px;
+    min-height: 30px;
     align-items: center;
     justify-content: center;
     border:2px solid var(--primary-text);
@@ -139,6 +142,8 @@ body{
     background-size: 300% 150%;
 }
 .main{
+    width: 100vw;
+    max-width: 100vw;
     margin: 0;
     overflow: visible;
     overflow-x: hidden;
@@ -250,13 +255,14 @@ body{
 @media screen and (max-width: 960px){
     body{
         margin-bottom: 100px;
+
     }
     .main{
         overflow: visible;
         padding: 20px 0px 0px 0px;
         .content{
             width: 100vw;
-            padding: 20px 0px 50px 0px;
+            padding: 20px 0px 0px 0px;
         }
         .footer{
             overflow: hidden;
