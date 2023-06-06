@@ -5,7 +5,7 @@ export function enterFromLeft(delay) {
         transition(":enter", [
             style({
                 opacity: 0,
-                transform: 'translateX(-100px)'
+                transform: 'translateX(-10px)'
             }),
             animate(`500ms ${delay}ms`, style({
                 opacity: 1,
@@ -19,7 +19,7 @@ export function enterFromLeft(delay) {
             }),
             animate('500ms 0ms', style({
                 opacity: 0,
-                transform: 'translateX(-100px)',
+                transform: 'translateX(-10px)',
             }))
         ])
     ])
@@ -29,7 +29,7 @@ export function enterFromRight(delay) {
         transition(":enter", [
             style({
                 opacity: 0,
-                transform: 'translateX(100px)'
+                transform: 'translateX(10px)'
             }),
             animate(`500ms ${delay}ms`, style({
                 opacity: 1,
@@ -43,7 +43,7 @@ export function enterFromRight(delay) {
             }),
             animate('500ms 0ms', style({
                 opacity: 0,
-                transform: 'translateX(100px)',
+                transform: 'translateX(10px)',
             }))
         ])
     ])
@@ -53,7 +53,7 @@ export function enterFromBottom(delay) {
         transition(":enter", [
             style({
                 opacity: 0,
-                transform: 'translateY(100px)'
+                transform: 'translateY(10px)'
             }),
             animate(`500ms ${delay}ms`, style({
                 opacity: 1,
@@ -67,7 +67,7 @@ export function enterFromBottom(delay) {
             }),
             animate('500ms 0ms', style({
                 opacity: 0,
-                transform: 'translateY(100px)',
+                transform: 'translateY(10px)',
             }))
         ])
     ])
@@ -77,7 +77,7 @@ export function enterFromTop(delay) {
         transition(":enter", [
             style({
                 opacity: 0,
-                transform: 'translateY(-100px)'
+                transform: 'translateY(-10px)'
             }),
             animate(`500ms ${delay}ms`, style({
                 opacity: 1,
@@ -91,7 +91,7 @@ export function enterFromTop(delay) {
             }),
             animate('500ms 0ms', style({
                 opacity: 0,
-                transform: 'translateY(-100px)',
+                transform: 'translateY(-10px)',
             }))
         ])
     ])

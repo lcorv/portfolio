@@ -9,15 +9,15 @@
             <h2 fxFlex="100">{{STRINGS[0].sendAnEmail[lang]}}:</h2>
             <form  fxFlex="100" (submit)="onSubmit('email')" fxLayoutAlign="center space-between" fxLayout="column" #cForm="ngForm" novalidate
                 [formGroup]="contactForm">
-                <div fxFlex="20" fxLayout="row wrap" class="form-field">
-                    <input class="form-input" fxFlex="100" formControlName="subject"
+                <div fxFlex="20" fxLayout="column" class="form-field">
+                    <input class="form-input" fxFlex="60" formControlName="subject"
                         [placeholder]="STRINGS[0].subject[lang]" type="text" required />
-                    <div class="form-err" *ngIf="formErrors.subject">{{formErrors.subject}}</div>
+                    <div fxFlex="40" class="form-err" *ngIf="formErrors.subject">{{formErrors.subject}}</div>
                 </div>
-                <div fxFlex="40" fxLayout="row wrap" class="form-field">
-                    <textarea class="form-input" fxFlex="100" formControlName="message"
+                <div fxFlex="60" fxLayout="column" class="form-field">
+                    <textarea class="form-input" fxFlex="60" formControlName="message"
                         [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
-                    <div class="form-err" *ngIf="formErrors.message">{{formErrors.message}}</div>
+                    <div fxFlex="40" class="form-err" *ngIf="formErrors.message">{{formErrors.message}}</div>
                 </div>
                 <div fxFlex.lt-sm="20"  class="form-actions" fxlayout="row wrap" fxLayoutAlign="center center">
                     <button fxFlex.lt-md="100" appButton [disabled]="!contactForm.valid" class="btn btn-link" type="submit">Invia</button>
@@ -29,10 +29,10 @@
             <h2 fxFlex="100">{{STRINGS[0].textMeOnWhatsapp[lang]}}:</h2>
             <form fxFlex="100" fxLayoutAlign="center space-between" (submit)="onSubmit('whatsapp')" fxLayout="column" #cForm="ngForm" novalidate
                 [formGroup]="whatsappForm">
-                <div fxFlex="60" fxLayout="row wrap" class="form-field">
-                    <textarea class="form-input" fxFlex="100" formControlName="message"
+                <div fxFlex="80" fxLayout="column" class="form-field">
+                    <textarea class="form-input" fxFlex="60" formControlName="message"
                         [placeholder]="STRINGS[0].yourMessage[lang]" type="text" required></textarea>
-                    <div class="form-err" *ngIf="whatsappErrors.message">{{whatsappErrors.message}}</div>
+                    <div fxFlex="40" class="form-err" *ngIf="whatsappErrors.message">{{whatsappErrors.message}}</div>
                 </div>
                 <div fxFlex.lt-sm="20" class="form-actions" fxLayoutAlign="center center">
                     <button fxFlex.lt-md="100" appButton [disabled]="!whatsappForm.valid" class="btn btn-link" type="submit">Invia</button>

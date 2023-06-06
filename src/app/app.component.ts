@@ -3,7 +3,7 @@ import { Icons } from './shared/icons';
 import { RouterOutlet, Router, ActivationStart } from '@angular/router';
 import { iconAnim } from './animations/navbarIconsAnim';
 import { routeAnim } from './animations/routeAnimation';
-import { enterFromLeft } from './animations/buttonsAnimation';
+import { enterFromLeft } from './animations/enterAnimations';
 import { TranslationService } from './services/translation.service';
 import { STRINGS } from './shared/translations';
 
@@ -11,7 +11,7 @@ import { STRINGS } from './shared/translations';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations:[iconAnim(),routeAnim(),enterFromLeft()]
+  animations:[iconAnim(),routeAnim(),enterFromLeft(0)]
 })
 
 export class AppComponent {
@@ -34,11 +34,12 @@ export class AppComponent {
     public el: ElementRef,
     public cdRef:ChangeDetectorRef,
     private translationService: TranslationService,
-    private router: Router,
+    public router: Router,
     ){
       this.setNavRoute()
   }
   ngOnInit(){
+    console.log(this.router.url)
     let language = localStorage.getItem('language');
     if(language){
       this.lan = language;

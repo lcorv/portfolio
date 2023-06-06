@@ -32,13 +32,21 @@
     <app-footer></app-footer>
   </nav>
   <div fxFlex="100" fxLayout="row wrap" fxFlexOffset.gt-sm="200px" class="main" [@routeAnim]="prepareRoute(outlet)">
-    <div fxFlex="100" fxLayoutAlign="center">
-      <div fxFlex="40" fxFlex.gt-xs="20" fxHide.gt-sm class="language-selector">
-        <mat-select (selectionChange)="change()" [(ngModel)]="lan" id="" fxFlex="70">
-          <mat-option value="it">italiano</mat-option>
-          <mat-option value="en">english</mat-option>
-        </mat-select>
-        <img fxFlex="30" src={{langImage}} alt={{lan}}>
+    <div class="top-bar" fxLayoutAlign="space-between center" fxLayout="row wrap" fxHide.gt-sm>
+      <div fxFlex="20" *ngIf="router.url != '/home'" class="propic-top" routerLink="/home" @enterLeft>
+        <div  fxLayoutAlign="center center"  >
+          <img fxFlex="100" src="assets/images/propic.jpg" alt="propic">
+        </div>
+      </div>
+      <div fxFlex></div>
+      <div fxFlex="40">
+        <div class="language-selector">
+          <mat-select (selectionChange)="change()" [(ngModel)]="lan" fxFlex="70">
+            <mat-option value="it">italiano</mat-option>
+            <mat-option value="en">english</mat-option>
+          </mat-select>
+          <img fxFlex="30" src={{langImage}} alt={{lan}}>
+        </div>
       </div>
     </div>
     <router-outlet #outlet="outlet"></router-outlet>
