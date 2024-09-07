@@ -14,7 +14,7 @@ export class ContactsComponent implements OnInit {
   STRINGS = STRINGS;
   lang:string = 'it';
   telNum:string = '3801010977'
-  email:string = 'l.corvino@live.it'
+  email:string = 'luca.corvino02@gmail.com'
   emailLink: string = '';
   wmsg:string = '';
   title = [Array.from(STRINGS[0].contactMe[this.lang]),Array.from(STRINGS[0].theWayYouLike[this.lang])];
